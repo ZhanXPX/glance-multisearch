@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  multisearch:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: glance-multisearch
+    restart: unless-stopped
+    environment:
+      - PORT=9000
+      - NODE_ENV=production
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./data:/app/data
