@@ -18,6 +18,6 @@ COPY . .
 RUN mkdir -p /app/data
 
 # 服务端默认监听 3000（也支持用 PORT 环境变量覆盖）
-EXPOSE 9105
+EXPOSE 9100
 
 CMD ["node", "server.js"]
